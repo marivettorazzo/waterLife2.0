@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+
+:root {
+  --primary-color: #2A9FB9;
+  --green: #2AB952;
+  --black: #000000;
+  --white: #FFFFFF;
+  --green-message: #6CDD99;
+  --primary-font: 'Julius Sans One',
+  --red :#A62626,
+  --yellow :#DF8C2A,
+  --sizeButtonM : 70px,
+  --sizeButtonG : 140px,
+    sans-serif;
+}
+body{
+  background-color: var(--black);
+  color: var(--white);
+ 
+}

@@ -1,0 +1,44 @@
+@import '../../styles/globals.scss';
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: var(--primary-font);
+}
+
+footer {
+  // position: fixed;
+  // bottom:0;
+  // left:0;
+  width: 100%;
+  height: 100px;
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ 
+
+  .opening-hours {
+    font-weight: 400;
+    font-size: 15px;
+    width: 30%;
+    color: var(--black);
+  }
+
+  .company {
+    color: var(--white);
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    align-items: center;
+  }
+  .social-media{
+    display: flex;
+    width: 350px;
+    flex-direction: row;
+    justify-content: space-around;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
+}
