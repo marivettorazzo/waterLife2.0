@@ -1,10 +1,12 @@
 @import '../../styles/main.scss';
+@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+
 .cards{
     width: 75%;
     display: flex;
     flex-wrap: wrap;
     justify-content: start;
-    column-gap: 15%;
+    column-gap: 23%;
 }
 .imageCard{
     width: 250px;
@@ -14,6 +16,11 @@
 .internoCards{
     display: flex;
     flex-direction: column;
+    margin-bottom: 50px;
+}
+.contentCreatButton{
+    width: 75%;
+    padding: 25px 0px;
 }
 .buttonsHome{
    width: var(--sizeButtonM);
