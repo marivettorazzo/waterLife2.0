@@ -1,8 +1,11 @@
-
-@import '../../styles/globals.scss';
-.home {
-    padding: 0px;
-    margin: 0px;
-    font-family: var(--primary-font);
-    cursor: pointer;
+@import "../styles/globals.scss";
+#home {
+  padding: 0px;
+  margin: 0px;
+  font-family: var(--primary-font);
+  cursor: pointer;
+  h1{
+    text-align: center;
+    padding: 20px 0px;
   }
+}
