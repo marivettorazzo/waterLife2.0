@@ -8,7 +8,7 @@ import slide2 from "/images/nemo.jpg";
 import slide3 from "/images/laranjinha.jpg";
 const Carouselcliente = () => {
   return (
-    <div>
+    <div className="contentFatherCarousel">
       <div className="contentCarousel">
         <section className="slider container mb-3">
           <Carousel >

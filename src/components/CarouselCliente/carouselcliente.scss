@@ -1,4 +1,9 @@
-
+.contentFatherCarousel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .contentCarousel{
    max-width: 650px;
     height: auto;

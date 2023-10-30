@@ -23,38 +23,40 @@ export default function Cards() {
   };
 
   return (
-    <div>
-      <div className="contentCreatButton">
-        {userMaster && (
-          <button className="create buttonsHome " onClick={create}>
-            Criar Card
-          </button>
-        )}
-      </div>
-      <div className="contentCards">
-        <div className="cards">
-          {pathsImagesCards.map((item, i) => {
-            return (
-              <div key={i} className="internoCards">
-                <img className="imageCard" src={item.img} />
-                {userMaster && (
-                  <button onClick={atualizar} className="alert buttonsHome">
-                    Editar
-                  </button>
-                )}
-                {userMaster && (
-                  <button
-                    onClick={deletar}
-                    className="deleteOrCancel buttonsHome "
-                  >
-                    Deletar
-                  </button>
-                )}
-              </div>
-            );
-          })}
+   
+      <div className="contentInternaButtonAndCards">
+        <div className="contentCreatButton">
+          {userMaster && (
+            <button className="create buttonsHome " onClick={create}>
+              Criar Card
+            </button>
+          )}
+        </div>
+        <div className="contentCards">
+          <div className="cards">
+            {pathsImagesCards.map((item, i) => {
+              return (
+                <div key={i} className="internoCards">
+                  <img className="imageCard" src={item.img} />
+                  {userMaster && (
+                    <button onClick={atualizar} className="alert buttonsHome">
+                      Editar
+                    </button>
+                  )}
+                  {userMaster && (
+                    <button
+                      onClick={deletar}
+                      className="deleteOrCancel buttonsHome "
+                    >
+                      Deletar
+                    </button>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </div>
       </div>
-    </div>
+   
   );
 }

@@ -1,6 +1,11 @@
 @import url('./styles/globals.scss');
 @import url('./styles/main.scss');
-@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+
 *{
   margin: 0 auto;
+  font-family: 'Julius Sans One', sans-serif; ;
+}
+.errorClass{
+  width: 100%;
+  height: auto;
 }

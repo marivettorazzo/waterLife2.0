@@ -7,14 +7,18 @@
   --white: #FFFFFF;
   --green-message: #6CDD99;
   --primary-font: 'Julius Sans One',
-  --red :#A62626,
-  --yellow :#DF8C2A,
-  --sizeButtonM : 70px,
-  --sizeButtonG : 140px,
+    --red:#A62626,
+    --yellow:#DF8C2A,
+    --sizeButtonM: 70px,
+    --sizeButtonG: 140px,
     sans-serif;
 }
-body{
+
+body {
   background-color: var(--black);
   color: var(--white);
- 
+
+  font-family: 'Julius Sans One', sans-serif;
+  
+
 }

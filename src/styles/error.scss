@@ -1,0 +1,23 @@
+.errorClass {
+  width: 100%;
+  min-height: 884px;
+  background-image: url("../../public/images/fundodoMar2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .informationsNotFound {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+    color: black;
+
+    a {
+      color: rgb(239, 204, 8);
+    }
+
+  }
+
+}
