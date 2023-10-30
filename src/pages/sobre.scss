@@ -1,0 +1,43 @@
+.contentSobreWater{
+    padding: 90px;
+    h1{
+        text-align: center;
+        margin-bottom: 35px;
+    }
+}
+.contentCardHistory{
+    width: 100%;
+    p{
+        letter-spacing: 0.2rem;
+        text-align: center;
+        display: flex;
+        align-items: center;
+    }
+   .childOne{
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 35px;
+    p{
+       
+        width: 45%;
+    }
+   }
+   .childTwo{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 35px;
+    p{
+       
+        width: 45%;
+    }
+   }
+    img{
+        width: 650px;
+        height: auto;
+        border-radius: 6px;
+    }
+}
