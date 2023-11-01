@@ -41,7 +41,7 @@
         &:hover{
             width:95%;
             transition: 1s;
-            box-shadow: 1px 8px 1em #29435e;
+            box-shadow: 1px 8px 1em var(--globalShadow);
         }
 
     }

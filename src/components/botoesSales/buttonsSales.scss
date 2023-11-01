@@ -21,7 +21,10 @@
             margin-bottom: 9px;
         }
         &:hover{
-            background-color: rgb(78, 196, 78);
+           box-shadow: inset 2px 2px var(--green-message);
+        }
+        &:active{
+           box-shadow: inset 2px 2px rgb(17, 17, 17);
         }
         
     }
