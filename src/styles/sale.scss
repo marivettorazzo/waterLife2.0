@@ -1,8 +1,13 @@
 @import '../styles/globals.scss';
-@import '../styles/main.scss';
+@import "../styles/main.scss";
 
 .contentPromo{
     min-height: 500px;
+    .contentCreatButton {
+       width:80.5%;
+       padding: 25px 0px;
+       margin: 20px;
+    }
     
     .title{
         text-align: center;
@@ -11,7 +16,7 @@
     .contentCardPromos{
         display: flex;
         flex-direction: row;
-        border:1px solid #ffff;
+        border: 1px solid var(--white);
         border-radius: 10px;
         margin: 25px;
         img{
@@ -27,6 +32,15 @@
             justify-content: space-around;
             align-items: center;
             margin: 15px;
+            .contentButtons{
+                border: 1px solid var(--white);
+                text-align: center;
+                padding: 10px;
+                p{
+                    margin: 0;
+                }
+            }
         }
+
     }
 }

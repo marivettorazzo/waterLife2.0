@@ -1,22 +1,26 @@
-
+import { useState } from "react";
 import '../styles/sale.scss'
 
 const sale = () => {
+  let [userMaster] = useState(true);
   
   const calcDescProductSale = (valueProduct,valueDesc) => {
-    let result = (valueProduct * valueDesc /100).toString().replace('.',',')
+    let result = (valueProduct * valueDesc /100).toString().replace('.',',');
      return  parseInt(result);
   };
  
   const calcValueafterDesc = (valueProduct,valueDesc) => {
      return  valueProduct - valueDesc;
   };
+  const create = (e) => {
+    console.log(e, "criei um card");
+  };
  
   const mock = [
     {
     img : "/images/amarelo.jpg",
     nameProduct : "Peixe do afeganistão",
-    validDate : 7/11/2023,
+    validDate : "07/11/2023",
     qtdParcelaSemJuros : 12,
     qtdDescontPix :10,
     valueProduct : 275.00,
@@ -25,7 +29,7 @@ const sale = () => {
     {
     img : "/images/amarelo.jpg",
     nameProduct : "Peixe do afeganistão",
-    validDate : 7/11/2023,
+    validDate : "07/11/2023",
     qtdParcelaSemJuros : 12,
     qtdDescontPix :10,
     valueProduct : 275.00,
@@ -34,7 +38,7 @@ const sale = () => {
     {
     img : "/images/amarelo.jpg",
     nameProduct : "Peixe do afeganistão",
-    validDate : 7/11/2023,
+    validDate : "07/11/2023",
     qtdParcelaSemJuros : 12,
     qtdDescontPix :10,
     valueProduct : 275.00,
@@ -43,7 +47,7 @@ const sale = () => {
     {
     img : "/images/amarelo.jpg",
     nameProduct : "Peixe do afeganistão",
-    validDate : 7/11/2023,
+    validDate : "07/11/2023",
     qtdParcelaSemJuros : 12,
     qtdDescontPix :10,
     valueProduct : 275.00,
@@ -52,7 +56,14 @@ const sale = () => {
 ]
   return (
     <div className="contentPromo">
-      <h1 className="title">IMPERDÍVEOS DA SEMANA!</h1>
+      <div className="contentCreatButton">
+          {userMaster && (
+            <button className="create buttonsHome" onClick={create}>
+              Criar Promoção
+            </button>
+          )}
+        </div>
+      <h1 className="title">IMPERDÍVEiS DA SEMANA!</h1>
         {
           mock.map((item)=>{
             return(
@@ -77,6 +88,9 @@ const sale = () => {
                       <p> SAI DE R${item.valueProduct},00</p>
                       <p>POR : R${calcValueafterDesc(item.valueProduct, calcDescProductSale(item.valueProduct,item.qtdDescontPix))}</p>
                       <p>VOCÊ ECONOMIZA R$ {calcDescProductSale(item.valueProduct,item.qtdDescontPix)}</p>
+                      <div className="contentButtons">
+                        <p>Aqui vão ficar os botões </p>
+                      </div>
                     </div>
 
                   </div>
