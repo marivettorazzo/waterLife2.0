@@ -1,4 +1,4 @@
-import "./sobre.scss";
+import "../styles/sobre.scss";
 const Sobre = () => {
   return (
     <div className="contentSobreWater">

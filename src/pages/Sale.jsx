@@ -1,48 +1,52 @@
 
-import './sale.scss'
+import '../styles/sale.scss'
 
 const sale = () => {
-  // let totalDesc;
-  // let totalPrice;
-  // const calcDescProductSale = (valueProduct,valueDesc) => {
-  //   this.total = valueProduct * valueDesc /100;
-  //   this.totalPrice = valueProduct - valueDesc;
-  // };
+  
+  const calcDescProductSale = (valueProduct,valueDesc) => {
+    let result = (valueProduct * valueDesc /100).toString().replace('.',',')
+     return  parseInt(result);
+  };
+ 
+  const calcValueafterDesc = (valueProduct,valueDesc) => {
+     return  valueProduct - valueDesc;
+  };
+ 
   const mock = [
     {
-    img : "../../public/images/amarelo.jpg",
+    img : "/images/amarelo.jpg",
     nameProduct : "Peixe do afeganistão",
     validDate : 7/11/2023,
     qtdParcelaSemJuros : 12,
     qtdDescontPix :10,
-    valueProduct : 275,
+    valueProduct : 275.00,
     id:12
   },
     {
-    img : "../../public/images/amarelo.jpg",
+    img : "/images/amarelo.jpg",
     nameProduct : "Peixe do afeganistão",
     validDate : 7/11/2023,
     qtdParcelaSemJuros : 12,
     qtdDescontPix :10,
-    valueProduct : 275,
+    valueProduct : 275.00,
     id:13
   },
     {
-    img : "../../public/images/amarelo.jpg",
+    img : "/images/amarelo.jpg",
     nameProduct : "Peixe do afeganistão",
     validDate : 7/11/2023,
     qtdParcelaSemJuros : 12,
     qtdDescontPix :10,
-    valueProduct : 275,
+    valueProduct : 275.00,
     id:14
   },
     {
-    img : "../../public/images/amarelo.jpg",
+    img : "/images/amarelo.jpg",
     nameProduct : "Peixe do afeganistão",
     validDate : 7/11/2023,
     qtdParcelaSemJuros : 12,
     qtdDescontPix :10,
-    valueProduct : 275,
+    valueProduct : 275.00,
     id:15
   },
 ]
@@ -63,6 +67,7 @@ const sale = () => {
                   <div className='infosCardContent'>
                     <div>
                       <h3>{item.nameProduct}</h3>
+                      <br/>
                       <p>PROMOCÃO ATÉ</p>
                       <p>{item.validDate}</p>
                       <p>{item.qtdParcelaSemJuros} X SEM JUROS</p>
@@ -70,9 +75,8 @@ const sale = () => {
                     </div>
                     <div>
                       <p> SAI DE R${item.valueProduct},00</p>
-                      
-                      {/* <p onClick={calcDescProductSale(item.valueProduct,item.qtdDescontPix).obj.totalPriceProduct}>POR R$ {totalPrice}</p>
-                      <p>VOCÊ ECONOMIZA {totalDesc} </p> */}
+                      <p>POR : R${calcValueafterDesc(item.valueProduct, calcDescProductSale(item.valueProduct,item.qtdDescontPix))}</p>
+                      <p>VOCÊ ECONOMIZA R$ {calcDescProductSale(item.valueProduct,item.qtdDescontPix)}</p>
                     </div>
 
                   </div>

@@ -1,7 +1,7 @@
 import Carouselcliente from "../components/CarouselCliente/CarouselCliente.jsx";
 import Cards from "../components/Cards/Cards.jsx";
 import Maps from "../components/Maps/Maps.jsx";
-import "./Home.scss"
+import "../styles/Home.scss"
 
 const Home = () => {
   return (

@@ -1,0 +1,32 @@
+@import '../styles/globals.scss';
+@import '../styles/main.scss';
+
+.contentPromo{
+    min-height: 500px;
+    
+    .title{
+        text-align: center;
+        padding: 20px 0px;
+    }
+    .contentCardPromos{
+        display: flex;
+        flex-direction: row;
+        border:1px solid #ffff;
+        border-radius: 10px;
+        margin: 25px;
+        img{
+            max-width: 420px;
+            height: auto;
+            margin: 20px;
+            border-radius: 10px;
+        }
+        .infosCardContent{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            margin: 15px;
+        }
+    }
+}
