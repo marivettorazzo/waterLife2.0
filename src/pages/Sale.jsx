@@ -1,7 +1,10 @@
-import { useState } from "react";
-import '../styles/sale.scss'
+"use client";
+import  { useState } from 'react';
+import '../styles/sale.scss';
+import ButtonsSales from '../components/botoesSales/ButtonsSales';
 
-const sale = () => {
+
+const Sale = () => {
   let [userMaster] = useState(true);
   
   const calcDescProductSale = (valueProduct,valueDesc) => {
@@ -89,7 +92,7 @@ const sale = () => {
                       <p>POR : R${calcValueafterDesc(item.valueProduct, calcDescProductSale(item.valueProduct,item.qtdDescontPix))}</p>
                       <p>VOCÊ ECONOMIZA R$ {calcDescProductSale(item.valueProduct,item.qtdDescontPix)}</p>
                       <div className="contentButtons">
-                        <p>Aqui vão ficar os botões </p>
+                        <ButtonsSales/>
                       </div>
                     </div>
 
@@ -103,4 +106,4 @@ const sale = () => {
   )
 }
 
-export default sale
+export default Sale;
