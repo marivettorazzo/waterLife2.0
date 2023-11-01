@@ -14,13 +14,17 @@
         padding: 20px 0px;
     }
     .contentCardPromos{
+        width: 90%;
         display: flex;
         flex-direction: row;
         border: 1px solid var(--white);
         border-radius: 10px;
         margin: 25px;
+        
+        transition: 1s;
+       
         img{
-            max-width: 420px;
+            max-width: 400px;
             height: auto;
             margin: 20px;
             border-radius: 10px;
@@ -33,6 +37,11 @@
             align-items: center;
             margin: 15px;
             
+        }
+        &:hover{
+            width:95%;
+            transition: 1s;
+            box-shadow: 1px 8px 1em #29435e;
         }
 
     }

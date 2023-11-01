@@ -1,6 +1,7 @@
 @import '../../styles/globals.scss';
 @import '../../styles/main.scss';
 .contentButtons{
+  
     display: flex;
     flex-direction: row;
     gap: 10px;
@@ -19,5 +20,11 @@
         svg{
             margin-bottom: 9px;
         }
+        &:hover{
+            background-color: rgb(78, 196, 78);
+        }
+        
     }
+    
+
 }

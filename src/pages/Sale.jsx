@@ -92,7 +92,7 @@ const Sale = () => {
                       <p>POR : R${calcValueafterDesc(item.valueProduct, calcDescProductSale(item.valueProduct,item.qtdDescontPix))}</p>
                       <p>VOCÊ ECONOMIZA R$ {calcDescProductSale(item.valueProduct,item.qtdDescontPix)}</p>
                       <div className="contentButtons">
-                        <ButtonsSales/>
+                        <ButtonsSales obj={item}/>
                       </div>
                     </div>
 
