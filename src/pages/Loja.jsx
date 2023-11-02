@@ -1,7 +1,10 @@
+import CardsLoja from "../components/CardLoja/CardsLoja";
 
 const Loja = () => {
   return (
-    <div>Loja</div>
+    <div>
+      <CardsLoja/>
+    </div>
   )
 }
 
