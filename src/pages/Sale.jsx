@@ -21,21 +21,21 @@ const Sale = () => {
  
   const mock = [
     {
-    img : "/images/amarelo.jpg",
-    nameProduct : "Peixe do afeganistão",
-    validDate : "07/11/2023",
-    qtdParcelaSemJuros : 12,
-    qtdDescontPix :10,
-    valueProduct : 275.00,
+    img : "/images/laranjinha.jpg",
+    nameProduct : "Peixe do Alpes Mexicanos",
+    validDate : "15/11/2023",
+    qtdParcelaSemJuros : 10,
+    qtdDescontPix :8,
+    valueProduct : 180.00,
     id:12
   },
     {
-    img : "/images/amarelo.jpg",
-    nameProduct : "Peixe do afeganistão",
-    validDate : "07/11/2023",
-    qtdParcelaSemJuros : 12,
-    qtdDescontPix :10,
-    valueProduct : 275.00,
+    img : "/images/nemo.jpg",
+    nameProduct : "Peixe Palhaço",
+    validDate : "08/11/2023",
+    qtdParcelaSemJuros : 6,
+    qtdDescontPix :5,
+    valueProduct : 120.00,
     id:13
   },
     {
@@ -48,12 +48,12 @@ const Sale = () => {
     id:14
   },
     {
-    img : "/images/amarelo.jpg",
-    nameProduct : "Peixe do afeganistão",
+    img : "/images/peixeDoAfeganistao.jpg",
+    nameProduct : "Beta laranja  do Himalaia",
     validDate : "07/11/2023",
     qtdParcelaSemJuros : 12,
-    qtdDescontPix :10,
-    valueProduct : 275.00,
+    qtdDescontPix :7,
+    valueProduct : 775.00,
     id:15
   },
 ]
@@ -92,7 +92,7 @@ const Sale = () => {
                       <p>POR : R${calcValueafterDesc(item.valueProduct, calcDescProductSale(item.valueProduct,item.qtdDescontPix))}</p>
                       <p>VOCÊ ECONOMIZA R$ {calcDescProductSale(item.valueProduct,item.qtdDescontPix)}</p>
                       <div className="contentButtons">
-                        <ButtonsSales obj={item}/>
+                        <ButtonsSales changeClassButtons={true}/>
                       </div>
                     </div>
 

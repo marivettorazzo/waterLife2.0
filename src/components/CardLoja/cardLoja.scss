@@ -1,7 +1,8 @@
 @import "../../styles/globals.scss";
 @import "../../styles/main.scss";
 .contentCardLoja{
-   width: 300px;
+    display: block;
+    width: 300px;
     border: 1px solid var(--white);
     padding: 20px;
     border-radius: 10px;
