@@ -1,8 +1,8 @@
 import ButtonsSales from '../botoesSales/ButtonsSales'
 import "./CardLoja.scss";
-const CardsLoja = (qtdParcelas,valueProduct, descPix) => {
+const CardsLoja = (qtdParcelas,valueProduct, descPix, key) => {
   return (
-    <div className="contentCardLoja">
+    <div className="contentCardLoja" key={key}>
       <img src="./images/nemo.jpg" alt="" />
       <div className="infosCardLoja">
         <p>{qtdParcelas}x R$ {valueProduct} - no cartão</p>

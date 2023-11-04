@@ -1,4 +1,4 @@
-import CardsLoja from "../components/CardLoja/CardsLoja";
+// import CardsLoja from "../components/CardLoja/CardsLoja";
 import "../styles/loja.scss";
 const Loja = () => {
   let resultSearch;
@@ -44,7 +44,7 @@ const Loja = () => {
           ],
         },
         {
-          idCategory: 2,
+          idCategory: 6,
           subNameCategorys: "Peixes de água doce",
           itens: [
             {
@@ -53,7 +53,7 @@ const Loja = () => {
               qtdParcelaSemJuros: 10,
               qtdDescontPix: 8,
               valueProduct: 180.0,
-              id: 1,
+              id: 7,
             },
             {
               img: "/images/nemo.jpg",
@@ -61,7 +61,7 @@ const Loja = () => {
               qtdParcelaSemJuros: 6,
               qtdDescontPix: 5,
               valueProduct: 120.0,
-              id: 2,
+              id: 8,
             },
             {
               img: "/images/amarelo.jpg",
@@ -69,7 +69,7 @@ const Loja = () => {
               qtdParcelaSemJuros: 12,
               qtdDescontPix: 10,
               valueProduct: 275.0,
-              id: 3,
+              id: 9,
             },
             {
               img: "/images/peixeDoAfeganistao.jpg",
@@ -77,12 +77,12 @@ const Loja = () => {
               qtdParcelaSemJuros: 12,
               qtdDescontPix: 7,
               valueProduct: 775.0,
-              id: 4,
+              id: 10,
             },
           ],
         },
         {
-          idCategory: 3,
+          idCategory: 11,
           subNameCategorys: "Corais",
           itens: [
             {
@@ -91,7 +91,7 @@ const Loja = () => {
               qtdParcelaSemJuros: 10,
               qtdDescontPix: 8,
               valueProduct: 180.0,
-              id: 1,
+              id: 12,
             },
             {
               img: "/images/nemo.jpg",
@@ -99,7 +99,7 @@ const Loja = () => {
               qtdParcelaSemJuros: 6,
               qtdDescontPix: 5,
               valueProduct: 120.0,
-              id: 2,
+              id: 13,
             },
             {
               img: "/images/amarelo.jpg",
@@ -107,7 +107,7 @@ const Loja = () => {
               qtdParcelaSemJuros: 12,
               qtdDescontPix: 10,
               valueProduct: 275.0,
-              id: 3,
+              id: 14,
             },
             {
               img: "/images/peixeDoAfeganistao.jpg",
@@ -115,12 +115,12 @@ const Loja = () => {
               qtdParcelaSemJuros: 12,
               qtdDescontPix: 7,
               valueProduct: 775.0,
-              id: 4,
+              id: 15,
             },
           ],
         },
         {
-          idCategory: 4,
+          idCategory: 16,
           subNameCategorys: "Aquarios",
           itens: [
             {
@@ -129,7 +129,7 @@ const Loja = () => {
               qtdParcelaSemJuros: 10,
               qtdDescontPix: 8,
               valueProduct: 180.0,
-              id: 1,
+              id: 17,
             },
             {
               img: "/images/nemo.jpg",
@@ -137,7 +137,7 @@ const Loja = () => {
               qtdParcelaSemJuros: 6,
               qtdDescontPix: 5,
               valueProduct: 120.0,
-              id: 2,
+              id: 18,
             },
             {
               img: "/images/amarelo.jpg",
@@ -145,7 +145,7 @@ const Loja = () => {
               qtdParcelaSemJuros: 12,
               qtdDescontPix: 10,
               valueProduct: 275.0,
-              id: 3,
+              id: 19,
             },
             {
               img: "/images/peixeDoAfeganistao.jpg",
@@ -153,12 +153,12 @@ const Loja = () => {
               qtdParcelaSemJuros: 12,
               qtdDescontPix: 7,
               valueProduct: 775.0,
-              id: 4,
+              id: 20,
             },
           ],
         },
         {
-          idCategory: 5,
+          idCategory: 21,
           subNameCategorys: "Algas",
           itens: [
             {
@@ -167,7 +167,7 @@ const Loja = () => {
               qtdParcelaSemJuros: 10,
               qtdDescontPix: 8,
               valueProduct: 180.0,
-              id: 1,
+              id:22,
             },
             {
               img: "/images/nemo.jpg",
@@ -175,7 +175,7 @@ const Loja = () => {
               qtdParcelaSemJuros: 6,
               qtdDescontPix: 5,
               valueProduct: 120.0,
-              id: 2,
+              id: 23,
             },
             {
               img: "/images/amarelo.jpg",
@@ -183,7 +183,7 @@ const Loja = () => {
               qtdParcelaSemJuros: 12,
               qtdDescontPix: 10,
               valueProduct: 275.0,
-              id: 3,
+              id: 24,
             },
             {
               img: "/images/peixeDoAfeganistao.jpg",
@@ -191,12 +191,12 @@ const Loja = () => {
               qtdParcelaSemJuros: 12,
               qtdDescontPix: 7,
               valueProduct: 775.0,
-              id: 4,
+              id: 25,
             },
           ],
         },
         {
-          idCategory: 6,
+          idCategory: 26,
           subNameCategorys: "Limpeza",
           itens: [
             {
@@ -205,7 +205,7 @@ const Loja = () => {
               qtdParcelaSemJuros: 10,
               qtdDescontPix: 8,
               valueProduct: 180.0,
-              id: 1,
+              id: 27,
             },
             {
               img: "/images/nemo.jpg",
@@ -213,7 +213,7 @@ const Loja = () => {
               qtdParcelaSemJuros: 6,
               qtdDescontPix: 5,
               valueProduct: 120.0,
-              id: 2,
+              id: 28,
             },
             {
               img: "/images/amarelo.jpg",
@@ -221,7 +221,7 @@ const Loja = () => {
               qtdParcelaSemJuros: 12,
               qtdDescontPix: 10,
               valueProduct: 275.0,
-              id: 3,
+              id: 29,
             },
             {
               img: "/images/peixeDoAfeganistao.jpg",
@@ -229,12 +229,12 @@ const Loja = () => {
               qtdParcelaSemJuros: 12,
               qtdDescontPix: 7,
               valueProduct: 775.0,
-              id: 4,
+              id: 30,
             },
           ],
         },
         {
-          idCategory: 7,
+          idCategory: 31,
           subNameCategorys: "Macro",
           itens: [
             {
@@ -243,7 +243,7 @@ const Loja = () => {
               qtdParcelaSemJuros: 10,
               qtdDescontPix: 8,
               valueProduct: 180.0,
-              id: 1,
+              id: 32,
             },
             {
               img: "/images/nemo.jpg",
@@ -251,7 +251,7 @@ const Loja = () => {
               qtdParcelaSemJuros: 6,
               qtdDescontPix: 5,
               valueProduct: 120.0,
-              id: 2,
+              id: 33,
             },
             {
               img: "/images/amarelo.jpg",
@@ -259,7 +259,7 @@ const Loja = () => {
               qtdParcelaSemJuros: 12,
               qtdDescontPix: 10,
               valueProduct: 275.0,
-              id: 3,
+              id: 34,
             },
             {
               img: "/images/peixeDoAfeganistao.jpg",
@@ -267,7 +267,7 @@ const Loja = () => {
               qtdParcelaSemJuros: 12,
               qtdDescontPix: 7,
               valueProduct: 775.0,
-              id: 4,
+              id: 35,
             },
           ],
         },
@@ -277,7 +277,8 @@ const Loja = () => {
   const getMenuItens = (id) => {
     for (let i of itensMenu[0].categorys)
       if (i.idCategory == id) {
-        resultSearch = itensMenu[0].categorys[i];
+        resultSearch = itensMenu[0].categorys[i]?.itens;
+        console.log(resultSearch, "Aqui o array")
       }
   };
 
@@ -289,17 +290,17 @@ const Loja = () => {
           {itensMenu[0].categorys.map((item) => {
             return (
               <button
-                key={item.id}
-                className="item-menu"
+
+                className="item-menu" key={item.idCategoryd}
                 onClick={getMenuItens(item.idCategory)}
               >
-                idCategory :{item.subNameCategorys}
+              {item.subNameCategorys}
               </button>
             );
           })}
         </section>
         <section className="content-card-product">
-          {resultSearch.map((itemOfValue) => {
+          {/* {resultSearch.map((itemOfValue) => {
             return (
               <CardsLoja
                 key={itemOfValue.id}
@@ -308,7 +309,7 @@ const Loja = () => {
                 descPix={itemOfValue.qtdDescontPix}
               />
             );
-          })}
+          })} */ <p>oi</p>}
         </section>
       </div>
     </section>
