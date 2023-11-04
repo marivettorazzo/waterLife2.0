@@ -1,13 +1,13 @@
 import ButtonsSales from '../botoesSales/ButtonsSales'
 import "./CardLoja.scss";
-const CardsLoja = () => {
+const CardsLoja = (qtdParcelas,valueProduct, descPix) => {
   return (
     <div className="contentCardLoja">
       <img src="./images/nemo.jpg" alt="" />
       <div className="infosCardLoja">
-        <p>5x R$ 150,00 - no cartão</p>
+        <p>{qtdParcelas}x R$ {valueProduct} - no cartão</p>
         <p>ou</p>
-        <p>5% de Desconto no PIX</p>
+        <p>{descPix} de Desconto no PIX</p>
         <ButtonsSales changeClassButtons={false} />
       </div>
     </div>
