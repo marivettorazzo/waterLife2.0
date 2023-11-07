@@ -13,6 +13,8 @@
 }
 
 .cards {
+  width: 90%;
+  margin-left: 6%;
   display: grid;
   grid-template-columns: 33% 33% 33%;
   justify-items :center;
@@ -30,7 +32,7 @@
   margin-bottom: 50px;
 }
 .contentCreatButton {
-  width:80.5%;
+  width:71%;
   padding: 25px 0px;
 }
 .buttonsHome {
