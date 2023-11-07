@@ -1,17 +1,25 @@
-import ButtonsSales from '../botoesSales/ButtonsSales'
+import ButtonsSales from '../botoesSales/ButtonsSales';
+import PropTypes from 'prop-types';
 import "./CardLoja.scss";
-const CardsLoja = (qtdParcelas,valueProduct, descPix, key) => {
+
+const CardsLoja =({props}) => {
   return (
-    <div className="contentCardLoja" key={key}>
+    <div className="contentCardLoja" >
       <img src="./images/nemo.jpg" alt="" />
       <div className="infosCardLoja">
-        <p>{qtdParcelas}x R$ {valueProduct} - no cartão</p>
+        <p>{props.qtdParcelas}x R$ {props.valueProduct} - no cartão</p>
         <p>ou</p>
-        <p>{descPix} de Desconto no PIX</p>
+        <p>{props.descPix} de Desconto no PIX</p>
         <ButtonsSales changeClassButtons={false} />
       </div>
     </div>
   );
 };
+CardsLoja.propTypes = {
+ 
+  valueProduct : PropTypes.number.isRequired,
+  qtdParcelas : PropTypes.string.isRequired,
+  descPix :PropTypes.number.isRequired
+}
 
 export default CardsLoja;
