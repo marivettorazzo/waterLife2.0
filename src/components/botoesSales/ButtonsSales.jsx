@@ -65,21 +65,21 @@ const ButtonsSales = (changeClassButtons) => {
       </button>
       <Modal
         show={show}
+        size="lg"
         onHide={handleClose}
         backdrop="static"
         keyboard={false}
       >
-        <Modal.Header closeButton>
-          <Modal.Title>Modal title</Modal.Title>
+        <Modal.Header  className="headerModal">
+          <Modal.Title>Termo de Garantia</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
-          <p>OI</p>
+        <Modal.Body className="bodyModal">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio numquam vitae amet temporibus hic! Eos veniam quia harum reiciendis eum ullam dolorem repellendus consequatur dicta? Autem ullam numquam debitis rerum?</p>
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
-            Close
+            Fechar
           </Button>
-          <Button variant="primary">Understood</Button>
         </Modal.Footer>
       </Modal>
     </div>
