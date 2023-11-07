@@ -19,8 +19,8 @@ const layout = () => {
         <Switch>
           <Header />
           <Route exact path="/" component={Home} />
-          <Route path="/promocaoes" component={promocao} />
-          <Route path="/sobre" component={sobre} />
+          <Route path="/sale" component={promocao} />
+          <Route path="/sobre-water-life" component={sobre} />
           <Route path="/loja" component={loja} />
           <Route path="/carrinho" component={carrinho} />
           <Footer />

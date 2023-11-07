@@ -10,9 +10,18 @@ const Header = () => {
         <div className="logo">
           <img className="img-fluid" src="/images/logoWater.png" alt="logo" />
         </div>
-        <div className="nav-item">Promoções</div>
-        <div className="nav-item">Sobre Nós</div>
-        <div className="nav-item">Carrinho</div>
+        <div className="nav-item">
+         <a href="/sale">Promoções</a>
+        </div>
+        <div className="nav-item">
+          <a href="/sobre-water-life">Sobre Nós</a>
+        </div>
+        <div className="nav-item">
+          <a href="/loja">Loja</a>
+        </div>
+        <div className="nav-item">
+          <a href="/carrinho">Carrinho</a>
+        </div>
         <div className="nav-item">
           <div className="buttonAdm">
             <svg
