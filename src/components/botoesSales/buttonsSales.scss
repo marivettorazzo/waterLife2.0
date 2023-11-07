@@ -1,5 +1,6 @@
 @import "../../styles/globals.scss";
 @import "../../styles/main.scss";
+
 .contentButtons {
   display: flex;
   flex-direction: row;
@@ -51,6 +52,11 @@
     }
     &:active {
       box-shadow: inset 2px 2px rgb(17, 17, 17);
+    }
+    a{
+      outline: none;
+      text-decoration: none;
+      color: var(--white);
     }
   }
 }
