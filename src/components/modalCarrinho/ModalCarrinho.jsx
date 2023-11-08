@@ -32,7 +32,7 @@ const ModalCarrinho = () => {
         keyboard={false}
       >
         <Modal.Header closeButton className="headerModal">
-          <Modal.Title></Modal.Title>
+          <Modal.Title>adicionar ao carrinho</Modal.Title>
         </Modal.Header>
         <Modal.Body className="bodyModal">
           <div className="content_accordeon">
@@ -46,10 +46,10 @@ const ModalCarrinho = () => {
             <div className="content_infos_accordion">
               <div className="content_text">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
-                  fugit cum, tenetur, praesentium explicabo reprehenderit
-                  excepturi perspiciatis ut soluta veniam porro similique saepe?
-                  Tempore reprehenderit expedita ad qui cum unde.
+                  PEIXE PALHAÇO
+                  5X r$ 143,00
+                  10%  DESC. PIX
+                  ATÉ 12x r$40,00
                 </p>
               </div>
               <Accordion defaultActiveKey={["0"]} alwaysOpen>
@@ -57,29 +57,40 @@ const ModalCarrinho = () => {
                   <Accordion.Header className="headerAccordeon">
                     Quantidade
                   </Accordion.Header>
-                  <Accordion.Body>1</Accordion.Body>
+                  <Accordion.Body>
+                    <input type="number" />
+                  </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
                   <Accordion.Header className="headerAccordeon">
                     Descrição
                   </Accordion.Header>
-                  <Accordion.Body>2</Accordion.Body>
+                  <Accordion.Body>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam rem cum obcaecati voluptas? Laborum, totam. Odio aspernatur, voluptatibus ullam doloribus inventore, corporis debitis, architecto facere repudiandae delectus vitae deleniti asperiores!</p>
+                  </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="2">
                   <Accordion.Header className="headerAccordeon">
                     Termo de garantia
                   </Accordion.Header>
-                  <Accordion.Body>3</Accordion.Body>
+                  <Accordion.Body>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores unde cumque vitae voluptatem rem doloribus. Rerum cumque distinctio nesciunt quisquam alias error est ipsa laudantium aspernatur. Recusandae nisi animi praesentium.</p>
+                    <label htmlFor="">ACEITO OS TERMOS DA GARANTIA</label>
+                    <input type="checkbox"/>
+                  </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
             </div>
           </div>
         </Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Fechar
+        <Modal.Footer className="modal_footer_buttons">
+          <Button className="create" onClick={handleClose}>
+            confirmar 
           </Button>
-        </Modal.Footer>
+          <Button className="deleteOrCancel" onClick={handleClose}>
+            cancelar 
+          </Button>
+        </Modal.Footer >
       </Modal>
     </div>
   );

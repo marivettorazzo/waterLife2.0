@@ -9,6 +9,11 @@ $primary-color: #fff;
     background-color: transparent;
     color: var(--yellow);
     padding: 6px;
+    &:hover{
+        background-color: var(--yellow);
+        color: var(--white);
+        border: var(--yellow);
+    }
 }
 .deleteOrCancel{
     border:1px solid var(--red);
@@ -16,6 +21,11 @@ $primary-color: #fff;
     background-color: transparent;
     color: var(--red);
     padding: 6px;
+    &:hover{
+        background-color: var(--red);
+        color: var(--white);
+        border: var(--red);
+    }
 }
 .create{
     width: var(--sizeButtonG);
@@ -24,6 +34,11 @@ $primary-color: #fff;
     background-color: transparent;
     color: var(--green);
     padding: 6px;
+    &:hover{
+        background-color: var(--green);
+        color: var(--white);
+        border: var(--green);
+    }
 }
 .buttonAdm{
     width: var(--sizeButtonM);
