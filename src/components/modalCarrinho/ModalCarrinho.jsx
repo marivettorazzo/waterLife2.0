@@ -4,11 +4,23 @@ import Accordion from "react-bootstrap/Accordion";
 import "./modalCarrinho.scss";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import mockImages from "../../assets/models/mockImagesCarousel.js";
 
 const ModalCarrinho = () => {
+  let [objChangeForImage,setObjtChangeClient] = useState({img:'./images/amarelo.jpg',idItem:10}) ;
+
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  const handleShowImageModal = (imagem, id, e) =>{
+    e;
+    objChangeForImage ={
+      img : imagem,
+      idItem:id
+    }
+    return objChangeForImage;
+  }
+
   return (
     <div id="content_Modal_Carrinho">
       <button className="container-fluid" onClick={handleShow}>
@@ -37,10 +49,18 @@ const ModalCarrinho = () => {
         <Modal.Body className="bodyModal">
           <div className="content_accordeon">
             <figure className="content_images">
-              <img className="first_img" src="./images/amarelo.jpg"></img>
+              <img className="first_img" src={objChangeForImage.img}></img>
+              
               <div className="content_others_images">
-                <img src="./images/laranjinha.jpg" alt="" />
-                <img src="./images/nemo.jpg" alt="" />
+                {
+                  mockImages.map((item, i )=>{
+                    return(
+                      <img onClick={(e)=>(setObjtChangeClient(handleShowImageModal(item.img, i),e))} src={item.img} alt=""  key={i}/>
+                    )
+                  })
+                  
+                }
+                
               </div>
             </figure>
             <div className="content_infos_accordion">
@@ -84,7 +104,7 @@ const ModalCarrinho = () => {
           </div>
         </Modal.Body>
         <Modal.Footer className="modal_footer_buttons">
-          <Button className="create" onClick={handleClose}>
+          <Button className="createActive" onClick={handleClose}>
             confirmar 
           </Button>
           <Button className="deleteOrCancel" onClick={handleClose}>
@@ -99,3 +119,6 @@ const ModalCarrinho = () => {
 ModalCarrinho.propTypes = {};
 
 export default ModalCarrinho;
+
+
+

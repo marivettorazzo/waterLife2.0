@@ -8,7 +8,9 @@
 
   .content_images {
     .first_img {
-      width: 100%;
+      max-width: 420px;
+      height: 280px;
+      object-fit: cover;
     }
 
     .content_others_images {
