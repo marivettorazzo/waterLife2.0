@@ -9,7 +9,7 @@ import carrinho from "../src/pages/Carrinho";
 import loja from "../src/pages/loja";
 import promocao from "../src/pages/promocao";
 import sobre from "../src/pages/Sobre/index.js";
-import Header from "../src/components/Header/header.jsx";
+import Header from "../src/components/Header/";
 import Footer from "../src/components/Footer/footer.jsx";
 const layout = () => {
   // eslint-disable-next-line react/no-deprecated

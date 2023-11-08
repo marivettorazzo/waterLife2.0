@@ -1,0 +1,57 @@
+@import "../../styles/globals.scss";
+@import "../../styles/main.scss";
+
+.content_accordeon {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  .content_images {
+  
+
+    .first_img {
+      width: 100%;
+    }
+
+    .content_others_images {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 17px 0px 0px 0px;
+
+      img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .content_infos_accordion {
+        width: 80%;
+    display: grid;
+    p{
+        padding: 15px;
+    }
+  }
+}
+
+.accordion {
+    
+  padding: 10px;
+
+  .accordion-header {
+    background-color: var(--black);
+    color: var(--white);
+
+    .accordion-button {
+      background-color: var(--black);
+      color: var(--white);
+      &:focus{
+        border: 1px solid transparent;
+      }
+    }
+  }
+}
