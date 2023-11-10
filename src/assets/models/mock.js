@@ -3,7 +3,8 @@ const itensMenu = [
     categorys: [
       {
         idCategory: 1,
-        subNameCategorys: "Peixes de água salgada",
+        catgory : "animals",
+        subNameCategorys: "Peixes de água salgada", 
         itens: [
           {
             img: "/images/laranjinha.jpg",
@@ -41,6 +42,7 @@ const itensMenu = [
       },
       {
         idCategory: 6,
+        catgory : "animals",
         subNameCategorys: "Peixes de água doce",
         itens: [
           {
@@ -79,6 +81,7 @@ const itensMenu = [
       },
       {
         idCategory: 11,
+        catgory : "animals",
         subNameCategorys: "Corais",
         itens: [
           {
@@ -117,6 +120,7 @@ const itensMenu = [
       },
       {
         idCategory: 16,
+        catgory : "utilities",
         subNameCategorys: "Aquarios",
         itens: [
           {
@@ -155,6 +159,7 @@ const itensMenu = [
       },
       {
         idCategory: 21,
+        category :"protist",
         subNameCategorys: "Algas",
         itens: [
           {
@@ -193,6 +198,7 @@ const itensMenu = [
       },
       {
         idCategory: 26,
+        catgory : "utilities",
         subNameCategorys: "Limpeza",
         itens: [
           {
@@ -232,6 +238,7 @@ const itensMenu = [
       {
         idCategory: 31,
         subNameCategorys: "Macro",
+        catgory : "protist",
         itens: [
           {
             img: "/images/laranjinha.jpg",

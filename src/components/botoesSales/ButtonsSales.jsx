@@ -2,21 +2,29 @@ import "./ButtonsSales.scss";
 import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import ProductWarrant  from '../../core/ProductWarranty';
+import garantia from "../../../src/assets/models/garantias.js";
 import ModalCarrinho from "../modalCarrinho/ModalCarrinho";
-const ButtonsSales = (changeClassButtons) => {
+const ButtonsSales = ({ changeClassButtons, obj }) => {
   // this condition activate the big mode if the property at parameter in function are false
   let decision =
     changeClassButtons != false ? "contentButtonsSmallSize" : "contentButtons";
-  {
-    console.log(decision);
-  }
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+  // let typewarrant = ()=>{ 
+  //   let result = obj.category == "animals" || obj.category == "protists";
+  //   if(result == true){
+  //     return garantia.animals;
+  //   }else {
+  //     return garantia.utilities;
+  //   }
+  // }
+  {console.log(garantia.animals)}
+
   return (
     <div className={decision}>
-     <ModalCarrinho onClick={handleShow} />
+      <ModalCarrinho onClick={handleShow} obj={obj} />
       <button className="container-fluid">
         <a href="https://wa.me/message/MEZ5S63VEC7ZI1">
           <svg
@@ -61,17 +69,22 @@ const ButtonsSales = (changeClassButtons) => {
           <Modal.Title>Termo de Garantia</Modal.Title>
         </Modal.Header>
         <Modal.Body className="bodyModal">
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio numquam vitae amet temporibus hic! Eos veniam quia harum reiciendis eum ullam dolorem repellendus consequatur dicta? Autem ullam numquam debitis rerum?</p>
+          <ProductWarrant src='./images/garantiaAnimaisWaterLife.pdf' />
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Fechar
           </Button>
-          
         </Modal.Footer>
       </Modal>
     </div>
   );
+};
+ButtonsSales.propTypes = {
+  nameProduct: "No name",
+  qtdParcelas: 0,
+  totalValueProduct: 0,
+  descPix: 0,
 };
 
 export default ButtonsSales;

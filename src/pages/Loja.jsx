@@ -42,7 +42,7 @@ const Loja = () => {
                     <p>{itemOfMenu.qtdParcelas}x R$ {itemOfMenu.valueProduct} - no cartão</p>
                     <p>ou</p>
                     <p>{itemOfMenu.descPix} de Desconto no PIX</p>
-                    <ButtonsSales />
+                    <ButtonsSales  obj={itemOfMenu}/>
                     </div>
                   </div>
                 </div>

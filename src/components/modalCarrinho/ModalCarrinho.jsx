@@ -6,20 +6,27 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import mockImages from "../../assets/models/mockImagesCarousel.js";
 
-const ModalCarrinho = () => {
-  let [objChangeForImage,setObjtChangeClient] = useState({img:'./images/amarelo.jpg',idItem:10}) ;
+const ModalCarrinho = ({ obj }) => {
+  let [objChangeForImage, setObjtChangeClient] = useState({
+    img: "./images/amarelo.jpg",
+    idItem: 10,
+  });
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const handleShowImageModal = (imagem, id, e) =>{
+  const handleShowImageModal = (imagem, id, e) => {
     e;
-    objChangeForImage ={
-      img : imagem,
-      idItem:id
-    }
+    objChangeForImage = {
+      img: imagem,
+      idItem: id,
+    };
     return objChangeForImage;
-  }
+  };
+
+  // const valuePortion = (valueTotalProduct, qtdportions) => {
+  //   return valueTotalProduct / qtdportions;
+  // };
 
   return (
     <div id="content_Modal_Carrinho">
@@ -50,26 +57,32 @@ const ModalCarrinho = () => {
           <div className="content_accordeon">
             <figure className="content_images">
               <img className="first_img" src={objChangeForImage.img}></img>
-              
+
               <div className="content_others_images">
-                {
-                  mockImages.map((item, i )=>{
-                    return(
-                      <img onClick={(e)=>(setObjtChangeClient(handleShowImageModal(item.img, i),e))} src={item.img} alt=""  key={i}/>
-                    )
-                  })
-                  
-                }
-                
+                {mockImages.map((item, i) => {
+                  return (
+                    <img
+                      onClick={(e) =>
+                        setObjtChangeClient(
+                          handleShowImageModal(item.img, i),
+                          e
+                        )
+                      }
+                      src={item.img}
+                      alt=""
+                      key={i}
+                    />
+                  );
+                })}
               </div>
             </figure>
             <div className="content_infos_accordion">
               <div className="content_text">
                 <p>
-                  PEIXE PALHAÇO
-                  5X r$ 143,00
-                  10%  DESC. PIX
-                  ATÉ 12x r$40,00
+                  {/* {obj.nameProduct ? obj.nameProduct : "No name"}
+                  {obj.qtdParcelas ? obj.qtdParcelas : 0}R$ */}
+                  {/* {valuePortion(obj.totalValueProduct, obj.qtdParcelas)} */}
+                  {console.log(obj)}
                 </p>
               </div>
               <Accordion defaultActiveKey={["0"]} alwaysOpen>
@@ -86,7 +99,13 @@ const ModalCarrinho = () => {
                     Descrição
                   </Accordion.Header>
                   <Accordion.Body>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam rem cum obcaecati voluptas? Laborum, totam. Odio aspernatur, voluptatibus ullam doloribus inventore, corporis debitis, architecto facere repudiandae delectus vitae deleniti asperiores!</p>
+                    <p>
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Veniam rem cum obcaecati voluptas? Laborum, totam. Odio
+                      aspernatur, voluptatibus ullam doloribus inventore,
+                      corporis debitis, architecto facere repudiandae delectus
+                      vitae deleniti asperiores!
+                    </p>
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="2">
@@ -94,9 +113,14 @@ const ModalCarrinho = () => {
                     Termo de garantia
                   </Accordion.Header>
                   <Accordion.Body>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores unde cumque vitae voluptatem rem doloribus. Rerum cumque distinctio nesciunt quisquam alias error est ipsa laudantium aspernatur. Recusandae nisi animi praesentium.</p>
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Maiores unde cumque vitae voluptatem rem doloribus. Rerum
+                      cumque distinctio nesciunt quisquam alias error est ipsa
+                      laudantium aspernatur. Recusandae nisi animi praesentium.
+                    </p>
                     <label htmlFor="">ACEITO OS TERMOS DA GARANTIA</label>
-                    <input type="checkbox"/>
+                    <input type="checkbox" />
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
@@ -105,20 +129,22 @@ const ModalCarrinho = () => {
         </Modal.Body>
         <Modal.Footer className="modal_footer_buttons">
           <Button className="createActive" onClick={handleClose}>
-            confirmar 
+            confirmar
           </Button>
           <Button className="deleteOrCancel" onClick={handleClose}>
-            cancelar 
+            cancelar
           </Button>
-        </Modal.Footer >
+        </Modal.Footer>
       </Modal>
     </div>
   );
 };
 
-ModalCarrinho.propTypes = {};
+ModalCarrinho.propTypes = {
+  nameProduct: "No name",
+  qtdParcelas: 0,
+  totalValueProduct: 0,
+  descPix: 0,
+};
 
 export default ModalCarrinho;
-
-
-
