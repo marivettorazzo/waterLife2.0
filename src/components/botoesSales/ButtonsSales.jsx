@@ -3,7 +3,7 @@ import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import ProductWarrant  from '../../core/ProductWarranty';
-import garantia from "../../../src/assets/models/garantias.js";
+
 import ModalCarrinho from "../modalCarrinho/ModalCarrinho";
 const ButtonsSales = ({ changeClassButtons, obj }) => {
   // this condition activate the big mode if the property at parameter in function are false
@@ -12,15 +12,8 @@ const ButtonsSales = ({ changeClassButtons, obj }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  // let typewarrant = ()=>{ 
-  //   let result = obj.category == "animals" || obj.category == "protists";
-  //   if(result == true){
-  //     return garantia.animals;
-  //   }else {
-  //     return garantia.utilities;
-  //   }
-  // }
-  {console.log(garantia.animals)}
+ 
+ 
 
   return (
     <div className={decision}>

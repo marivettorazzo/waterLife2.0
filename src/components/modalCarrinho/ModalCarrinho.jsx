@@ -23,10 +23,11 @@ const ModalCarrinho = ({ obj }) => {
     };
     return objChangeForImage;
   };
+  {console.log(obj, "esse aqui é o que eu quero")}
 
-  // const valuePortion = (valueTotalProduct, qtdportions) => {
-  //   return valueTotalProduct / qtdportions;
-  // };
+  const valuePortion = (valueTotalProduct, qtdportions) => {
+    return valueTotalProduct - (valueTotalProduct / qtdportions);
+  };
 
   return (
     <div id="content_Modal_Carrinho">
@@ -79,10 +80,9 @@ const ModalCarrinho = ({ obj }) => {
             <div className="content_infos_accordion">
               <div className="content_text">
                 <p>
-                  {/* {obj.nameProduct ? obj.nameProduct : "No name"}
-                  {obj.qtdParcelas ? obj.qtdParcelas : 0}R$ */}
-                  {/* {valuePortion(obj.totalValueProduct, obj.qtdParcelas)} */}
-                  {console.log(obj)}
+                  {obj.nameProduct ? obj.nameProduct : "No name"}
+                 
+                  {valuePortion(obj.valueProduct,obj.qtdParcelaSemJuros)}
                 </p>
               </div>
               <Accordion defaultActiveKey={["0"]} alwaysOpen>
