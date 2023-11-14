@@ -4,6 +4,7 @@ import Accordion from "react-bootstrap/Accordion";
 import "./modalCarrinho.scss";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import ProductWarrant from "../../core/ProductWarranty.jsx";
 import mockImages from "../../assets/models/mockImagesCarousel.js";
 
 const ModalCarrinho = ({ obj }) => {
@@ -81,8 +82,12 @@ const ModalCarrinho = ({ obj }) => {
               <div className="content_text">
                 <p>
                   {obj.nameProduct ? obj.nameProduct : "No name"}
+                  <br></br>
                  
-                  {valuePortion(obj.valueProduct,obj.qtdParcelaSemJuros)}
+                  R${valuePortion(obj.valueProduct,obj.qtdParcelaSemJuros)},00
+                  {obj.qtdParcelaSemJuros}x Sem juros
+                  <br></br> 
+                  {obj.qtdDescontPix}% de desconto no PIX
                 </p>
               </div>
               <Accordion defaultActiveKey={["0"]} alwaysOpen>
@@ -91,7 +96,7 @@ const ModalCarrinho = ({ obj }) => {
                     Quantidade
                   </Accordion.Header>
                   <Accordion.Body>
-                    <input type="number" />
+                    <input type="number"  className="inputNumber"/>
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
@@ -100,11 +105,7 @@ const ModalCarrinho = ({ obj }) => {
                   </Accordion.Header>
                   <Accordion.Body>
                     <p>
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Veniam rem cum obcaecati voluptas? Laborum, totam. Odio
-                      aspernatur, voluptatibus ullam doloribus inventore,
-                      corporis debitis, architecto facere repudiandae delectus
-                      vitae deleniti asperiores!
+                     {obj.description}
                     </p>
                   </Accordion.Body>
                 </Accordion.Item>
@@ -113,14 +114,9 @@ const ModalCarrinho = ({ obj }) => {
                     Termo de garantia
                   </Accordion.Header>
                   <Accordion.Body>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Maiores unde cumque vitae voluptatem rem doloribus. Rerum
-                      cumque distinctio nesciunt quisquam alias error est ipsa
-                      laudantium aspernatur. Recusandae nisi animi praesentium.
-                    </p>
+                  <ProductWarrant src='./images/garantiaAnimaisWaterLife.pdf' />
                     <label htmlFor="">ACEITO OS TERMOS DA GARANTIA</label>
-                    <input type="checkbox" />
+                    <input type="checkbox" className="inputCheck" />
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>

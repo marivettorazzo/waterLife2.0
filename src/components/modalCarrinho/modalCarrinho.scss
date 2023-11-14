@@ -39,7 +39,7 @@
       min-height: 235px;
       justify-content: center;
       p {
-        width: 156px;
+        width: 250px;
         padding: 15px;
         text-align: center;
       }
@@ -61,6 +61,17 @@
         border: 1px solid transparent;
       }
     }
+ }
+ .accordion-body{
+  .inputNumber{
+    width: 70px;
+    height: 50px;
+    font-size: 35px;
+    outline: var(--green-message);
+  }
+ }
+ .inputCheck{
+
  }
 }
 .modal_footer_buttons{
