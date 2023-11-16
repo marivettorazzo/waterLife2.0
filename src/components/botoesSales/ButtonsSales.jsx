@@ -73,11 +73,6 @@ const ButtonsSales = ({ changeClassButtons, obj }) => {
     </div>
   );
 };
-ButtonsSales.propTypes = {
-  nameProduct: "No name",
-  qtdParcelas: 0,
-  totalValueProduct: 0,
-  descPix: 0,
-};
+
 
 export default ButtonsSales;

@@ -1,4 +1,3 @@
-// import PropTypes from "prop-types";
 import { useState } from "react";
 import Accordion from "react-bootstrap/Accordion";
 import "./modalCarrinho.scss";
@@ -24,11 +23,11 @@ const ModalCarrinho = ({ obj }) => {
     };
     return objChangeForImage;
   };
-  {console.log(obj, "esse aqui é o que eu quero")}
 
   const valuePortion = (valueTotalProduct, qtdportions) => {
-    return valueTotalProduct - (valueTotalProduct / qtdportions);
+    return valueTotalProduct - valueTotalProduct / qtdportions;
   };
+  {console.log(obj)}
 
   return (
     <div id="content_Modal_Carrinho">
@@ -81,12 +80,12 @@ const ModalCarrinho = ({ obj }) => {
             <div className="content_infos_accordion">
               <div className="content_text">
                 <p>
-                  {obj.nameProduct ? obj.nameProduct : "No name"}
+                  {obj.nameProduct}
                   <br></br>
-                 
-                  R${valuePortion(obj.valueProduct,obj.qtdParcelaSemJuros)},00
+                  R${valuePortion(obj.valueProduct, obj.qtdParcelaSemJuros)},00
+                  {"   "}
                   {obj.qtdParcelaSemJuros}x Sem juros
-                  <br></br> 
+                  <br></br>
                   {obj.qtdDescontPix}% de desconto no PIX
                 </p>
               </div>
@@ -96,7 +95,7 @@ const ModalCarrinho = ({ obj }) => {
                     Quantidade
                   </Accordion.Header>
                   <Accordion.Body>
-                    <input type="number"  className="inputNumber"/>
+                    <input type="number" className="inputNumber" />
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
@@ -104,9 +103,7 @@ const ModalCarrinho = ({ obj }) => {
                     Descrição
                   </Accordion.Header>
                   <Accordion.Body>
-                    <p>
-                     {obj.description}
-                    </p>
+                    <p>{obj.description}</p>
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="2">
@@ -114,7 +111,7 @@ const ModalCarrinho = ({ obj }) => {
                     Termo de garantia
                   </Accordion.Header>
                   <Accordion.Body>
-                  <ProductWarrant src='./images/garantiaAnimaisWaterLife.pdf' />
+                    <ProductWarrant src="./images/garantiaAnimaisWaterLife.pdf" />
                     <label htmlFor="">ACEITO OS TERMOS DA GARANTIA</label>
                     <input type="checkbox" className="inputCheck" />
                   </Accordion.Body>
@@ -134,13 +131,6 @@ const ModalCarrinho = ({ obj }) => {
       </Modal>
     </div>
   );
-};
-
-ModalCarrinho.propTypes = {
-  nameProduct: "No name",
-  qtdParcelas: 0,
-  totalValueProduct: 0,
-  descPix: 0,
 };
 
 export default ModalCarrinho;

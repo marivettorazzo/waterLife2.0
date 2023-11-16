@@ -43,6 +43,7 @@ const Loja = () => {
                     <p>ou</p>
                     <p>{itemOfMenu.descPix} de Desconto no PIX</p>
                     <ButtonsSales  obj={itemOfMenu}/>
+                
                     </div>
                   </div>
                 </div>

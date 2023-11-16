@@ -4,6 +4,7 @@ import '../styles/sale.scss';
 import ButtonsSales from '../components/botoesSales/ButtonsSales';
 
 
+
 const Sale = () => {
   let [userMaster] = useState(true);
   
@@ -18,6 +19,7 @@ const Sale = () => {
   const create = (e) => {
     console.log(e, "criei um card");
   };
+  
  
   const mock = [
     {
@@ -26,6 +28,7 @@ const Sale = () => {
     validDate : "15/11/2023",
     qtdParcelaSemJuros : 10,
     qtdDescontPix :8,
+    description : "Produto nacional",
     valueProduct : 180.00,
     id:12
   },
@@ -35,6 +38,7 @@ const Sale = () => {
     validDate : "08/11/2023",
     qtdParcelaSemJuros : 6,
     qtdDescontPix :5,
+    description : "Produto nacional",
     valueProduct : 120.00,
     id:13
   },
@@ -44,6 +48,7 @@ const Sale = () => {
     validDate : "07/11/2023",
     qtdParcelaSemJuros : 12,
     qtdDescontPix :10,
+    description : "Produto nacional",
     valueProduct : 275.00,
     id:14
   },
@@ -53,6 +58,7 @@ const Sale = () => {
     validDate : "07/11/2023",
     qtdParcelaSemJuros : 12,
     qtdDescontPix :7,
+    description : "Produto nacional",
     valueProduct : 775.00,
     id:15
   },
@@ -78,6 +84,7 @@ const Sale = () => {
                       alt={item.nameProduct}
                     />
                   </figure>
+                  {console.log(item , "esse aqui")}
                   <div className='infosCardContent'>
                     <div>
                       <h3>{item.nameProduct}</h3>
@@ -92,7 +99,7 @@ const Sale = () => {
                       <p>POR : R${calcValueafterDesc(item.valueProduct, calcDescProductSale(item.valueProduct,item.qtdDescontPix))}</p>
                       <p>VOCÊ ECONOMIZA R$ {calcDescProductSale(item.valueProduct,item.qtdDescontPix)}</p>
                       <div className="contentButtons">
-                        <ButtonsSales changeClassButtons={true}/>
+                        <ButtonsSales changeClassButtons={true} obj={item}/>
                       </div>
                     </div>
 
