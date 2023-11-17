@@ -33,11 +33,12 @@
     width: 80%;
     display: grid;
     align-items: end;
-  
+
     .content_text {
       display: flex;
       min-height: 235px;
       justify-content: center;
+
       p {
         width: 250px;
         padding: 15px;
@@ -57,25 +58,84 @@
     .accordion-button {
       background-color: var(--black);
       color: var(--white);
+
       &:focus {
         border: 1px solid transparent;
       }
     }
- }
- .accordion-body{
-  .inputNumber{
-    width: 70px;
-    height: 50px;
-    font-size: 35px;
-    outline: var(--green-message);
   }
- }
- .inputCheck{
 
- }
+  .accordion-body {
+    .inputNumber {
+      width: 70px;
+      height: 50px;
+      font-size: 35px;
+      outline: var(--green-message);
+    }
+  }
+
+  .checkbox {
+    display: flex;
+    padding: 15px 0px;
+    cursor: pointer;
+  }
+  .checkbox input {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+  .checkbox label {
+    position: relative;
+    padding-left: 2.2em;
+    display: inline-block;
+  }
+  .checkbox label::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 1.5em;
+    width: 1.5em;
+    background: #FFF;
+    margin-right: 0.5em;
+    border: 1px solid #999;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0, -50%);
+  }
+  .checkbox label::after {
+    content: "\2713";
+    position: absolute;
+    top: 50%;
+    left: 0.75em;
+    transform: translate(-50%, -50%);
+    font-size: 1em;
+    color: #FFF;
+    opacity: 0;
+    transition: all 0.2s ease;
+  }
+  .checkbox label:focus::before, .checkbox label:hover::before {
+    background: #DDD;
+  }
+  .checkbox input:checked + label::before {
+    background: var(--green);
+    border-color: var(--green);
+  }
+  .checkbox input:checked + label::after {
+    opacity: 1;
+  }
+  
 }
-.modal_footer_buttons{
-    background-color: var(--black);
-    color: var(--white);
-    border: 1px solid var(--white);
+
+.modal_footer_buttons {
+  background-color: var(--black);
+  color: var(--white);
+  border: 1px solid var(--white);
 }

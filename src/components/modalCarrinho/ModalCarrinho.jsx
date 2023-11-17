@@ -27,7 +27,9 @@ const ModalCarrinho = ({ obj }) => {
   const valuePortion = (valueTotalProduct, qtdportions) => {
     return valueTotalProduct - valueTotalProduct / qtdportions;
   };
-  {console.log(obj)}
+  {
+    console.log(obj);
+  }
 
   return (
     <div id="content_Modal_Carrinho">
@@ -112,8 +114,18 @@ const ModalCarrinho = ({ obj }) => {
                   </Accordion.Header>
                   <Accordion.Body>
                     <ProductWarrant src="./images/garantiaAnimaisWaterLife.pdf" />
-                    <label htmlFor="">ACEITO OS TERMOS DA GARANTIA</label>
-                    <input type="checkbox" className="inputCheck" />
+                    <div className="contentAcceptedAwarrant">
+                      <div className="checkbox">
+                        <input
+                          type="checkbox"
+                          id="chk1"
+                          className="checkbox"
+                          name="chk"
+                        />
+
+                        <label htmlFor="chk1">Aceite os termos de garantia</label>
+                      </div>
+                    </div>
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
