@@ -11,9 +11,17 @@ const ModalCarrinho = ({ obj }) => {
     img: "./images/amarelo.jpg",
     idItem: 10,
   });
-
+let arrItensCartshopping = [];
   const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
+  // let quantityChosen;
+  const handleClose = (item) => {
+    setShow(false);
+
+    arrItensCartshopping.push(item);
+    console.log(arrItensCartshopping)
+
+  };
+
   const handleShow = () => setShow(true);
   const handleShowImageModal = (imagem, id, e) => {
     e;
@@ -23,13 +31,16 @@ const ModalCarrinho = ({ obj }) => {
     };
     return objChangeForImage;
   };
-
+  // const quantityChosen = (value){
+  //   quantityChosen = value.target.value;
+  // }
   const valuePortion = (valueTotalProduct, qtdportions) => {
     return valueTotalProduct - valueTotalProduct / qtdportions;
   };
   {
     console.log(obj);
   }
+
 
   return (
     <div id="content_Modal_Carrinho">
@@ -57,6 +68,7 @@ const ModalCarrinho = ({ obj }) => {
           <Modal.Title>adicionar ao carrinho</Modal.Title>
         </Modal.Header>
         <Modal.Body className="bodyModal">
+          {/* select for images in modal for visualization */}
           <div className="content_accordeon">
             <figure className="content_images">
               <img className="first_img" src={objChangeForImage.img}></img>
@@ -65,20 +77,21 @@ const ModalCarrinho = ({ obj }) => {
                 {mockImages.map((item, i) => {
                   return (
                     <img
-                      onClick={(e) =>
-                        setObjtChangeClient(
-                          handleShowImageModal(item.img, i),
-                          e
+                    onClick={(e) =>
+                      setObjtChangeClient(
+                        handleShowImageModal(item.img, i),
+                        e
                         )
                       }
                       src={item.img}
                       alt=""
                       key={i}
-                    />
-                  );
-                })}
+                      />
+                      );
+                    })}
               </div>
             </figure>
+           {/* selection af quantity at modal shopping */}
             <div className="content_infos_accordion">
               <div className="content_text">
                 <p>
@@ -114,18 +127,6 @@ const ModalCarrinho = ({ obj }) => {
                   </Accordion.Header>
                   <Accordion.Body>
                     <ProductWarrant src="./images/garantiaAnimaisWaterLife.pdf" />
-                    <div className="contentAcceptedAwarrant">
-                      <div className="checkbox">
-                        <input
-                          type="checkbox"
-                          id="chk1"
-                          className="checkbox"
-                          name="chk"
-                        />
-
-                        <label htmlFor="chk1">Aceite os termos de garantia</label>
-                      </div>
-                    </div>
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
