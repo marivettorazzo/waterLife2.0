@@ -1,0 +1,52 @@
+@import '../styles/globals.scss';
+@import "../styles/main.scss";
+
+.contentPromo{
+    min-height: 500px;
+    .contentCreatButton {
+       width:80.5%;
+       padding: 25px 0px;
+       margin: 20px;
+    }
+    
+    .title{
+        text-align: center;
+        padding: 20px 0px;
+    }
+    .contentCardPromos{
+        width: 90%;
+        display: flex;
+        flex-direction: row;
+        border: 1px solid var(--white);
+        border-radius: 10px;
+        margin: 25px;
+        
+        transition: 1s;
+        figure{
+            width: 400px;
+            height: auto;
+            margin: 20px;
+           
+            img{
+               width: 100%;
+               height: auto;
+               border-radius: 10px;
+            }
+        }
+        .infosCardContent{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            margin: 15px;
+            
+        }
+        &:hover{
+            width:95%;
+            transition: 1s;
+            box-shadow: 1px 8px 1em var(--globalShadow);
+        }
+
+    }
+}

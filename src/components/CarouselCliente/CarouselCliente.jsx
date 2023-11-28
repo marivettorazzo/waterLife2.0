@@ -3,24 +3,23 @@
 import "./carouselcliente.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Carousel from "react-bootstrap/Carousel";
-import slide1 from "/images/amarelo.jpg";
-import slide2 from "/images/nemo.jpg";
-import slide3 from "/images/laranjinha.jpg";
+import imagesForCarousel from "../../assets/models/mockImagesCarousel";
 const Carouselcliente = () => {
   return (
-    <div>
+    <div className="contentFatherCarousel">
       <div className="contentCarousel">
         <section className="slider container mb-3">
           <Carousel >
-            <Carousel.Item className="slide">
-              <img className="d-block w-100" src={slide1} alt="First slide" />
-            </Carousel.Item>
-            <Carousel.Item className="slide">
-              <img className="d-block w-100" src={slide2} alt="Second slide" />
-            </Carousel.Item>
-            <Carousel.Item className="slide">
-              <img className="d-block w-100" src={slide3} alt="Third slide" />
-            </Carousel.Item>
+            {
+              imagesForCarousel.map((item, i )=>{
+                return (
+                  <Carousel.Item className="slide" key={i}>
+                  <img className="d-block w-100" src={item.img} alt="First slide" />
+                </Carousel.Item>
+                )
+              })
+            }
+           
           </Carousel>
         </section>
       </div>

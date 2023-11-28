@@ -1,0 +1,71 @@
+@import "../../styles/globals.scss";
+@import "../../styles/main.scss";
+
+.contentButtons {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  button {
+    width: 100%;
+    height: 70px;
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    padding: 5px;
+    p {
+      margin-bottom: 0;
+    }
+    svg {
+      margin-bottom: 9px;
+    }
+    &:hover {
+      box-shadow: inset 2px 2px var(--green-message);
+    }
+    &:active {
+      box-shadow: inset 2px 2px rgb(17, 17, 17);
+    }
+  }
+}
+.contentButtonsSmallSize {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  button {
+    width: 72px;
+    height: auto;
+    background-color: var(--green);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    font-size: 13px;
+    padding: 3px;
+    p {
+      margin-bottom: 0;
+    }
+    svg {
+      margin-bottom: 9px;
+    }
+    &:hover {
+      box-shadow: inset 2px 2px var(--green-message);
+    }
+    &:active {
+      box-shadow: inset 2px 2px rgb(17, 17, 17);
+    }
+    a{
+      outline: none;
+      text-decoration: none;
+      color: var(--white);
+    }
+  }
+}
+.headerModal{
+  background-color: var(--black);
+  color: var(--white);
+  text-align: center;
+}
+.bodyModal{
+  color: var(--black);
+  text-align: center;
+}

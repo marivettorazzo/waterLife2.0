@@ -1,22 +1,18 @@
-
-
-import './App.scss';
-import Header from './components/Header/header';
-import Footer from './components/Footer/footer';
-import Home from './pages/Home/Home';
-
+import "./App.scss";
+// Reaproveitamento de estruturas
+import { Outlet } from "react-router";
+import Header from "./components/Header/header";
+import Footer from "./components/Footer/footer";
 
 function App() {
-
-
   return (
-    <div>
-     <Header/>
-     <Home/>
-     <Footer/>
+    <div className="app">
+      <Header />
+      <Outlet />
+      <Footer />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
 // Mariana Vettorazzo

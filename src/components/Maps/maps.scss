@@ -1,25 +1,33 @@
-.content_maps {
-  width: 75%;
-  margin-top: 25px;
-  margin-bottom: 25px;
-  border-radius: 8px;
-  padding: 15px;
-  background-color: white;
+.contentFatherMaps{
+  width: 100%;
   display: flex;
-  align-items: baseline;
-  text-align: center;
-  height: 65px;
-  font-weight: 900;
-}
-.button_maps {
-  background-color: transparent;
-  border: none;
-  // margin: 20px 0px;
-  a > figure > img {
-    width: 70px;
+  align-items: center;
+  justify-content: center;
+  .content_maps {
+    width: 81%;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: white;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    gap: 50px;
+    height: 65px;
+    font-weight: 900;
   }
-}
-
-p {
-  color: black;
+  .button_maps {
+    background-color: transparent;
+    border: none;
+    // margin: 20px 0px;
+    a > figure > img {
+      width: 70px;
+    }
+  }
+  
+  p {
+    color: black;
+  }
+  
 }

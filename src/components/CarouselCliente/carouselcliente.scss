@@ -1,19 +1,25 @@
-
+.contentFatherCarousel{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .contentCarousel{
-    width: 650px;
-    height: auto;
+   max-width: 650px;
+    height: 550px;
     margin-top: 25px;
     img{
         border-radius: 10px;
     }
 }
 .contentServiceDiv{
-    width: 75%;
+    width: 81.4%;
     display: flex;
     align-items: center;
     justify-content: center;
     figure{
         display: flex;
+      
         img{
            width: 100%;
            height: auto;

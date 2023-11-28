@@ -9,6 +9,11 @@ $primary-color: #fff;
     background-color: transparent;
     color: var(--yellow);
     padding: 6px;
+    &:hover{
+        background-color: var(--yellow);
+        color: var(--white);
+        border: 1px solid var(--yellow);
+    }
 }
 .deleteOrCancel{
     border:1px solid var(--red);
@@ -16,11 +21,49 @@ $primary-color: #fff;
     background-color: transparent;
     color: var(--red);
     padding: 6px;
+    &:hover{
+        background-color: var(--red);
+        color: var(--white);
+        border: 1px solid var(--red);
+    }
 }
 .create{
+    width: var(--sizeButtonG);
     border:1px solid var(--green);
     border-radius: 5px;
     background-color: transparent;
     color: var(--green);
     padding: 6px;
+    &:hover{
+        background-color: var(--green);
+        color: var(--white);
+        border:1px solid var(--green);
+    }
+}
+.createActive{
+    width: var(--sizeButtonG);
+    border:1px solid var(--green);
+    border-radius: 5px;
+    background-color: var(--green);
+    color: var(--white);
+    padding: 6px;
+    &:hover{
+        background-color: var( --green-message);
+        color: var(--white);
+        border:1px solid var(--green);
+    }
+}
+.buttonAdm{
+    width: var(--sizeButtonM);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+    padding: 2px;
+    text-align: center;
+    background-color: transparent;
+    border: 1px solid var(--white);
+    border-radius: 25px;
+    color: var(--white);
 }

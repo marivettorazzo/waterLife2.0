@@ -1,0 +1,32 @@
+@import "../../styles/globals.scss";
+@import "../../styles/main.scss";
+.contentCardLoja{
+    display: block;
+    width: 300px;
+    border: 1px solid var(--white);
+    padding: 20px;
+    border-radius: 10px;
+    img{
+        width: 100%;
+        height: auto;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+    }
+    .infosCardLoja{
+        margin-top: 10px;
+        background-color: var(--white);
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        color: var(--black);
+        font-weight: 900;
+        text-align: center;
+        padding: 10px;
+        p{
+            margin-bottom: 0;
+        }
+        .buttonsShopping{
+            width: 300px !important;
+            
+        }
+    }
+}

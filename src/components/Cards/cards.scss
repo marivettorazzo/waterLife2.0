@@ -1,27 +1,40 @@
-@import '../../styles/main.scss';
-@import url('https://fonts.googleapis.com/css?family=Julius+Sans+One');
+@import "../../styles/main.scss";
+@import url("https://fonts.googleapis.com/css?family=Julius+Sans+One");
 
-.cards{
-    width: 75%;
+.contentInternaButtonAndCards {
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: start;
-    column-gap: 23%;
+    justify-content: center;
 }
-.imageCard{
-    width: 250px;
-    height: 300px;
-    border-radius: 15px;
+.contentCards{
+  margin: 20px;
+  width: 100%;
 }
-.internoCards{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 50px;
+
+.cards {
+  width: 90%;
+  margin-left: 6%;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  justify-items :center;
 }
-.contentCreatButton{
-    width: 75%;
-    padding: 25px 0px;
+.imageCard {
+  max-width: 250px;
+  height: 300px;
+  border-radius: 15px;
+  
 }
-.buttonsHome{
-   width: var(--sizeButtonM);
+.internoCards {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.contentCreatButton {
+  width:71%;
+  padding: 25px 0px;
+}
+.buttonsHome {
+  width: var(--sizeButtonG);
 }
