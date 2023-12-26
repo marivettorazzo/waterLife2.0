@@ -34,9 +34,11 @@ const ModalCarrinho = ({ obj }) => {
 
     console.log(arrItensCartshopping, "esse aqui é o que eu fiz ");
   };
+   // function get value of quantity product
   const getQuantityProduct = (e) => {
     quantityProduct = e.target.value;
   };
+  // function get value of warranty product
   const getAcceptedWarrantyProduct = (e) => {
     acceptedWarranty = e.target.checked ? true : false;
   };
