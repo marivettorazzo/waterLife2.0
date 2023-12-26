@@ -14,7 +14,7 @@ const Maps = () => {
           </figure>
         </a>
       </button>
-        <p>Nossa endereço, Praça : Anísio José Moreira n° 2222 Centro Mirassol</p> 
+        <p>Nossa endereço, Praça : Anísio José Moreira n° 1000 Centro Mirassol</p> 
     </div>
     </div>
   )

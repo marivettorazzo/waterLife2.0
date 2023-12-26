@@ -11,18 +11,39 @@ const ModalCarrinho = ({ obj }) => {
     img: "./images/amarelo.jpg",
     idItem: 10,
   });
-let arrItensCartshopping = [];
+  let arrItensCartshopping = [];
+  let quantityProduct = 0;
+  let acceptedWarranty = false;
   const [show, setShow] = useState(false);
-  // let quantityChosen;
-  const handleClose = (item) => {
+  // function close modal and get inserted items in cart shop
+  const handleClose = () => {
     setShow(false);
-
-    arrItensCartshopping.push(item);
-    console.log(arrItensCartshopping)
-
   };
+  const send = () => {
+    acceptedWarranty ? setShow(false) : setShow(true);
+    let objectCartShopping = {
+      product: obj.nameProduct,
+      value: obj.valueProduct,
+      quantity: quantityProduct,
+      acceptedWarranty: acceptedWarranty,
+      item: [obj],
+    };
+    acceptedWarranty
+      ? arrItensCartshopping.push(objectCartShopping)
+      : arrItensCartshopping.push();
 
+    console.log(arrItensCartshopping, "esse aqui é o que eu fiz ");
+  };
+  const getQuantityProduct = (e) => {
+    quantityProduct = e.target.value;
+  };
+  const getAcceptedWarrantyProduct = (e) => {
+    acceptedWarranty = e.target.checked ? true : false;
+  };
+  // function open modal
   const handleShow = () => setShow(true);
+
+  // choice of images function in modal
   const handleShowImageModal = (imagem, id, e) => {
     e;
     objChangeForImage = {
@@ -31,16 +52,10 @@ let arrItensCartshopping = [];
     };
     return objChangeForImage;
   };
-  // const quantityChosen = (value){
-  //   quantityChosen = value.target.value;
-  // }
+
   const valuePortion = (valueTotalProduct, qtdportions) => {
     return valueTotalProduct - valueTotalProduct / qtdportions;
   };
-  {
-    console.log(obj);
-  }
-
 
   return (
     <div id="content_Modal_Carrinho">
@@ -77,21 +92,21 @@ let arrItensCartshopping = [];
                 {mockImages.map((item, i) => {
                   return (
                     <img
-                    onClick={(e) =>
-                      setObjtChangeClient(
-                        handleShowImageModal(item.img, i),
-                        e
+                      onClick={(e) =>
+                        setObjtChangeClient(
+                          handleShowImageModal(item.img, i),
+                          e
                         )
                       }
                       src={item.img}
                       alt=""
                       key={i}
-                      />
-                      );
-                    })}
+                    />
+                  );
+                })}
               </div>
             </figure>
-           {/* selection af quantity at modal shopping */}
+            {/* selection af quantity at modal shopping */}
             <div className="content_infos_accordion">
               <div className="content_text">
                 <p>
@@ -110,7 +125,11 @@ let arrItensCartshopping = [];
                     Quantidade
                   </Accordion.Header>
                   <Accordion.Body>
-                    <input type="number" className="inputNumber" />
+                    <input
+                      type="number"
+                      className="inputNumber"
+                      onChange={getQuantityProduct}
+                    />
                   </Accordion.Body>
                 </Accordion.Item>
                 <Accordion.Item eventKey="1">
@@ -127,6 +146,10 @@ let arrItensCartshopping = [];
                   </Accordion.Header>
                   <Accordion.Body>
                     <ProductWarrant src="./images/garantiaAnimaisWaterLife.pdf" />
+                    <input
+                      type="checkbox"
+                      onChange={getAcceptedWarrantyProduct}
+                    />
                   </Accordion.Body>
                 </Accordion.Item>
               </Accordion>
@@ -134,7 +157,7 @@ let arrItensCartshopping = [];
           </div>
         </Modal.Body>
         <Modal.Footer className="modal_footer_buttons">
-          <Button className="createActive" onClick={handleClose}>
+          <Button className="createActive" onClick={send}>
             confirmar
           </Button>
           <Button className="deleteOrCancel" onClick={handleClose}>
